@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+    --black:#272D3B;
+    --red:#ED176F;
+    --coral:#F7817F;
+    --gradient:linear-gradient(90deg, var(--red),var(--coral));
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    outline:none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    list-style:none ;
+}
+*::selection{
+    background-color: #ED176F;
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: #fff;
+    color:var(--black);
+    z-index: 1000;
+    padding:2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    font-size: 2.5rem;
+    color:var(--black);
+    font-weight: bolder;
+}
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color:#272D3B;
+    font-weight: bold;
+}
+#menu{
+    font-size: 3rem;
+    cursor:pointer;
+    display: none;
+}
+
+
+/* Home section starts*/
+section{
+    padding:2rem 7%;
+}
+body{
+    max-height: 300rem;
+}
+.home{
+    background: url(/bg.jpg) no-repeat;
+    background-position:center;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home .content{
+    text-align: center;
+}
+.home .content h1{
+    font-size: 5rem;
+    color: #fff;
+}
+.home .content p{
+    font-size: 2rem;
+    color: #eee;
+}
+.home .content a{
+    font-size: 2rem;
+    background: transparent;
+    color: #eee;
+    border: .1rem solid #fff;
+    border-radius: 25px;
+    position: relative;
+    top:30px;    
+    padding:10px; 
+    
+}
+.home .content a:hover{
+ text-decoration:underline;
+ color: #272D3B;
+}
+
+/*Services section */
+.services .row{
+    display: flex;
+    flex: 1 1 33rem;
+    align-items: center;
+    justify-content: center;
+}
+.services span{
+    color:#F7817F;
+}
+.services h1{
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 20px;
+}
+.services .box{
+    border: .1rem solid #eee;
+    margin: 5rem;
+    box-shadow: 0 .5rem 1rem  rgba(0,0,0,.1);
+    border-radius: 50px;
+}
+.services .row .box img{
+    width:250px;
+    display: block;
+    margin: 3rem auto;
+    border-radius: 25px;
+
+}
+.services .row .box h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.services .row .box p{
+    font-size: 1.5rem;
+    text-align: justify;
+    padding:1rem;
+}
+/*About us*/
+.about{
+    color: #eee;
+    background-color: #272D3B;
+}
+.about h1
+{
+    font-size: 6rem;
+    text-align: center;
+}
+.about p{
+    font-size: 2rem;
+    text-align: justify;
+    margin-top: 30px;
+}
+/*footer*/
+.footer{
+    text-align: center;
+    background-color: black;
+    color: #eee;
+    opacity: .87;
+    margin-top: 5rem;
+}
+.footer .icons i 
+ {
+ padding:2rem;
+ font-size: 3rem;
+}
+.us{
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+}
+.us >div{
+    font-size:1.6rem;
+}
+.residential .col
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:2rem;
+   
+}
+.residential .col .row{
+    display: flex;
+    box-shadow: 0 .5rem 1rem  rgba(0,0,0,.1);
+    width: 50%;
+}
+.residential .col .row img{
+    width: 30rem;
+}
+.residential .col .row .con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.residential .col .row .con p{
+    position: relative;
+    top:10%;
+    left:-3.3rem;
+}
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .services .row{
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+}
+@media (max-width:781px){
+#menu{
+    display: block;
+}
+header .navbar {
+position: absolute;
+top:100%;
+left:0;
+right:0;
+background:#fff;
+border-top: .1rem solid #272D3B;
+padding:2rem;
+clip-path: polygon(0 0 ,100% 0,0 0);
+}
+header .nav-toggle
+{
+    clip-path: polygon(0 0,100% 0 ,100% 100% ,0 100%);
+}
+header .navbar a{
+    display: block;
+    padding-bottom: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.fa-times{
+    transform: rotate(180deg);
+}
+}
